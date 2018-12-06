@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link bookmark start -->
       <div class="col">
         <a href="/bookmarks/<%= @bookmark.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit bookmark
         </a>
       </div>
-      <!-- Edit link bookmark end -->
 
-      <!-- Delete link bookmark start -->
       <div class="col">
         <a href="/delete_bookmark/<%= @bookmark.id %>" class="btn btn-block btn-outline-secondary">
           Delete bookmark
         </a>
       </div>
-      <!-- Delete link bookmark end -->
     </div>
 
     <dl>
       <dt>
         Dish
       </dt>
-      <!-- Display dish_id start -->
       <dd>
         <% if @bookmark.dish.present? %>
           <a href="/dishes/<%= @bookmark.dish_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display dish_id end -->
 
       <dt>
         Venue
       </dt>
-      <!-- Display venue_id start -->
       <dd>
         <% if @bookmark.venue.present? %>
           <a href="/venues/<%= @bookmark.venue_id %>">
@@ -53,12 +46,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display venue_id end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @bookmark.user.present? %>
           <a href="/users/<%= @bookmark.user_id %>">
@@ -66,46 +57,35 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Notes
       </dt>
-      <!-- Display notes start -->
       <dd>
         <%= @bookmark.notes %>
       </dd>
-      <!-- Display notes end -->
 
       <dt>
         Image
       </dt>
-      <!-- Display image start -->
       <dd>
         <%= @bookmark.image %>
       </dd>
-      <!-- Display image end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@bookmark.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@bookmark.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
